@@ -31,11 +31,17 @@
   <header class="navbar">
 
     <div class="logo">
-      Kelz Travel Luxe
+      <img src="images/kelz-logo.png" alt="Kelz Travel Luxe Logo" class="logo-img">
     </div>
 
-    <nav>
-      <a href="#">Home</a>
+    <button class="menu-toggle" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+    <nav class="nav-menu">
+      <a href="#home">Home</a>
       <a href="#destinations">Destinations</a>
       <a href="#experience">Experience</a>
       <a href="#booking">Book</a>
@@ -45,11 +51,11 @@
   </header>
 
   <!-- HERO SECTION -->
-  <section class="hero">
+  <section id="home" class="hero">
 
     <div class="overlay"></div>
 
-    <video autoplay muted loop playsinline class="hero-video">
+    <video autoplay muted loop playsinline class="hero-video" preload="metadata">
       <source src="videos/Steelpan-drummer.mp4" type="video/mp4">
     </video>
 
@@ -83,7 +89,7 @@
     <div class="destination-grid">
 
       <div class="card">
-        <img src="images/paris.jpg" alt="Paris">
+        <img src="images/Paris sunset.jpg" alt="Paris luxury travel destination" loading="lazy">
         <div class="card-content">
           <h3>Paris</h3>
           <p>Elegant stays and iconic experiences.</p>
@@ -91,7 +97,7 @@
       </div>
 
       <div class="card">
-        <img src="images/dubai.jpg" alt="Dubai">
+        <img src="images/Dubai city.jpg" alt="Dubai modern luxury destination" loading="lazy">
         <div class="card-content">
           <h3>Dubai</h3>
           <p>Modern luxury and bold adventure.</p>
@@ -99,7 +105,7 @@
       </div>
 
       <div class="card">
-        <img src="images/bali.jpg" alt="Bali">
+        <img src="images/Bali sunset.jpg" alt="Bali relaxation and luxury escapes" loading="lazy">
         <div class="card-content">
           <h3>Bali</h3>
           <p>Relaxation and private luxury escapes.</p>
@@ -129,6 +135,105 @@
 
   </section>
 
+  <!-- ABOUT KELLY -->
+  <section id="about-kelly" class="kelly-section">
+
+    <div class="kelly-container">
+      
+      <div class="kelly-image">
+        <img src="images/kelly.jpg" alt="Kelly, travel and event planning expert" loading="lazy">
+      </div>
+
+      <div class="kelly-content">
+
+        <h2>Meet Kelly</h2>
+
+        <h3 class="kelly-title">Sr. Travel Consultant</h3>
+
+        <p>
+          Here's Kelly, she will be planning your Getaway. She is well-versed in the fun and rigors of making your traveling experience a memorable one.
+        </p>
+
+        <div class="credentials">
+          <h4>Professional Credentials</h4>
+          <ul>
+            <li>Degreed and Certified Travel Consultant</li>
+            <li>Former Reservationist for Major Airlines</li>
+            <li>Travel Agent - Wagon Lits Travel</li>
+            <li>Travel Agent - American Express Travel</li>
+            <li>Domestic & International Travel Planning Specialist</li>
+          </ul>
+        </div>
+
+        <p class="about-text">
+          This travel agency came together to help busy people plan and book their dream vacations as well as attend exciting events.
+        </p>
+
+        <div class="experience-badge">
+          <span class="years">20+</span>
+          <span class="label">Years of Travel & Event Planning Experience</span>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SEARCH SECTION -->
+  <section id="search" class="search-section">
+
+    <div class="search-overlay"></div>
+
+    <div class="search-content">
+
+      <h2>Want to Search on Your Own?</h2>
+
+      <p>
+        For those who would like to search on their own, we can offer the best deals available. Click on the search button below to explore our partner platform.
+      </p>
+
+      <p class="highlight-text">
+        What's exciting about our business is that we want to create a business relationship, so we can better serve your current and future individual, company and family experiences.
+      </p>
+
+      <a href="https://kellywatkins.inteletravel.com/" target="_blank" rel="noopener noreferrer" class="btn btn-search">
+        Search Deals Now
+      </a>
+
+    </div>
+
+  </section>
+
+  <!-- DREAM VACATION FORM SECTION -->
+  <section id="dream-form" class="dream-section">
+
+    <div class="dream-overlay"></div>
+
+    <div class="dream-image">
+      <img src="images/dream-vacation.jpg" alt="Tropical beach paradise" loading="lazy">
+    </div>
+
+    <div class="dream-content">
+
+      <h2>Your Adventures Start Here!</h2>
+
+      <p class="dream-subtitle">
+        To begin your DREAM vacation, take a moment to complete form
+      </p>
+
+      <p>
+        Discover the most amazing destinations and plan your dream vacation today. Click button below to get started!
+      </p>
+
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSci7xJ03GT8JeHWT7MfGUm43bf2nbZjhE2tmQdkKjmyqxVxKA/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-dream">
+        Start Planning Now
+      </a>
+
+    </div>
+
+  </section>
+
   <!-- BOOKING -->
   <section id="booking" class="section">
 
@@ -138,13 +243,13 @@
 
     <form id="bookingForm">
 
-      <input type="text" placeholder="Destination" required>
+      <input type="text" placeholder="Destination" required aria-label="Enter your destination">
 
-      <input type="date" required>
+      <input type="date" required aria-label="Select travel date">
 
-      <input type="number" placeholder="Travelers" required>
+      <input type="number" placeholder="Travelers" min="1" required aria-label="Number of travelers">
 
-      <input type="email" placeholder="Your Email" required>
+      <input type="email" placeholder="Your Email" required aria-label="Enter your email">
 
       <button type="submit">
         Request My Trip
@@ -164,9 +269,9 @@
     </p>
 
     <div class="socials">
-      <a href="#">Instagram</a>
-      <a href="#">TikTok</a>
-      <a href="#">Facebook</a>
+      <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Instagram">Instagram</a>
+      <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="Follow us on TikTok">TikTok</a>
+      <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Follow us on Facebook">Facebook</a>
     </div>
 
   </footer>
