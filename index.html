@@ -6,13 +6,11 @@
 
   <title>Kelz Travel Luxe</title>
 
-  <!-- SEO -->
   <meta
     name="description"
     content="Luxury travel experiences, curated vacations, and unforgettable destinations with Kelz Travel Luxe."
   />
 
-  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -21,13 +19,11 @@
     rel="stylesheet"
   />
 
-  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
 
-  <!-- NAVIGATION -->
   <header class="navbar">
 
     <div class="logo">
@@ -44,13 +40,13 @@
       <a href="#home">Home</a>
       <a href="#destinations">Destinations</a>
       <a href="#experience">Experience</a>
+      <a href="#dream-form">Application</a>
       <a href="#booking">Book</a>
       <a href="#contact">Contact</a>
     </nav>
 
   </header>
 
-  <!-- HERO SECTION -->
   <section id="home" class="hero">
 
     <div class="overlay"></div>
@@ -81,7 +77,6 @@
 
   </section>
 
-  <!-- DESTINATIONS -->
   <section id="destinations" class="section">
 
     <div class="section-title">
@@ -92,7 +87,7 @@
     <div class="destination-grid">
 
       <div class="card">
-        <img src="images/Paris sunset.jpg" alt="Paris luxury travel destination" loading="lazy">
+        <img src="images/Paris%20sunset.jpg" alt="Paris luxury travel destination" loading="lazy">
         <div class="card-content">
           <h3>Paris</h3>
           <p>Elegant stays and iconic experiences.</p>
@@ -100,7 +95,7 @@
       </div>
 
       <div class="card">
-        <img src="images/Dubai city.jpg" alt="Dubai modern luxury destination" loading="lazy">
+        <img src="images/Dubai%20city.jpg" alt="Dubai modern luxury destination" loading="lazy">
         <div class="card-content">
           <h3>Dubai</h3>
           <p>Modern luxury and bold adventure.</p>
@@ -108,7 +103,7 @@
       </div>
 
       <div class="card">
-        <img src="images/Bali sunset.jpg" alt="Bali relaxation and luxury escapes" loading="lazy">
+        <img src="images/Bali%20sunset.jpg" alt="Bali relaxation and luxury escapes" loading="lazy">
         <div class="card-content">
           <h3>Bali</h3>
           <p>Relaxation and private luxury escapes.</p>
@@ -119,7 +114,6 @@
 
   </section>
 
-  <!-- EXPERIENCE -->
   <section id="experience" class="experience-section">
 
     <div class="experience-content">
@@ -138,7 +132,6 @@
 
   </section>
 
-  <!-- ABOUT KELLY -->
   <section id="about-kelly" class="kelly-section">
 
     <div class="kelly-container">
@@ -164,7 +157,7 @@
             <li>Former Reservationist for Major Airlines</li>
             <li>Travel Agent - Wagon Lits Travel</li>
             <li>Travel Agent - American Express Travel</li>
-            <li>Domestic & International Travel Planning Specialist</li>
+            <li>Domestic &amp; International Travel Planning Specialist</li>
           </ul>
         </div>
 
@@ -174,7 +167,7 @@
 
         <div class="experience-badge">
           <span class="years">20+</span>
-          <span class="label">Years of Travel & Event Planning Experience</span>
+          <span class="label">Years of Travel &amp; Event Planning Experience</span>
         </div>
 
       </div>
@@ -183,7 +176,6 @@
 
   </section>
 
-  <!-- SEARCH SECTION -->
   <section id="search" class="search-section">
 
     <div class="search-overlay"></div>
@@ -208,7 +200,6 @@
 
   </section>
 
-  <!-- DREAM VACATION FORM SECTION -->
   <section id="dream-form" class="dream-section">
 
     <div class="dream-overlay"></div>
@@ -222,22 +213,58 @@
       <h2>Your Adventures Start Here!</h2>
 
       <p class="dream-subtitle">
-        To begin your DREAM vacation, take a moment to complete form
+        To begin your DREAM vacation, take a moment to complete the inquiry application below.
       </p>
 
-      <p>
-        Discover the most amazing destinations and plan your dream vacation today. Click button below to get started!
-      </p>
+      <form action="https://formsubmit.co/your-email@example.com" method="POST" class="application-form">
+        
+        <input type="hidden" name="_next" value="https://yourwebsite.com/#home">
+        
+        <input type="hidden" name="_subject" value="New Dream Vacation Application - Kelz Travel Luxe">
 
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSci7xJ03GT8JeHWT7MfGUm43bf2nbZjhE2tmQdkKjmyqxVxKA/viewform" target="_blank" rel="noopener noreferrer" class="btn btn-dream">
-        Start Planning Now
-      </a>
+        <div class="form-group">
+          <input type="text" name="full_name" placeholder="Full Name" required aria-label="Full Name">
+        </div>
+
+        <div class="form-group">
+          <input type="email" name="email" placeholder="Email Address" required aria-label="Email Address">
+        </div>
+
+        <div class="form-group">
+          <input type="tel" name="phone" placeholder="Phone Number" required aria-label="Phone Number">
+        </div>
+
+        <div class="form-group">
+          <input type="text" name="preferred_destination" placeholder="Preferred Destination(s)" required aria-label="Preferred Destination">
+        </div>
+
+        <div class="form-group">
+          <input type="text" name="travel_dates" placeholder="Estimated Travel Dates / Month" required aria-label="Estimated Travel Dates">
+        </div>
+
+        <div class="form-group">
+          <select name="budget_range" required aria-label="Budget Range">
+            <option value="" disabled selected>Select Budget Range (Per Person)</option>
+            <option value="$2,500 - $5,000">$2,500 - $5,000</option>
+            <option value="$5,000 - $10,000">$5,000 - $10,000</option>
+            <option value="$10,000+">$10,000+</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <textarea name="vacation_details" rows="4" placeholder="Tell us about your dream vacation, special occasions, or preferences..." aria-label="Vacation Details"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-dream">
+          Submit Application
+        </button>
+
+      </form>
 
     </div>
 
   </section>
 
-  <!-- BOOKING -->
   <section id="booking" class="section">
 
     <div class="section-title">
@@ -246,13 +273,13 @@
 
     <form id="bookingForm">
 
-      <input type="text" placeholder="Destination" required aria-label="Enter your destination">
+      <input type="text" name="destination" placeholder="Destination" required aria-label="Enter your destination">
 
-      <input type="date" required aria-label="Select travel date">
+      <input type="date" name="travel_date" required aria-label="Select travel date">
 
-      <input type="number" placeholder="Travelers" min="1" required aria-label="Number of travelers">
+      <input type="number" name="travelers" placeholder="Travelers" min="1" required aria-label="Number of travelers">
 
-      <input type="email" placeholder="Your Email" required aria-label="Enter your email">
+      <input type="email" name="email" placeholder="Your Email" required aria-label="Enter your email">
 
       <button type="submit">
         Request My Trip
@@ -262,7 +289,6 @@
 
   </section>
 
-  <!-- FOOTER -->
   <footer id="contact">
 
     <h3>Kelz Travel Luxe</h3>
